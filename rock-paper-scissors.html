@@ -6,9 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- kompiuteris atsitiktinai pasirenka viena is 3 variantu; 
-    funkcija
-    -->
     <script>
         function getComputerChoice() {
             const randomNumber = Math.floor(Math.random() * 3);
@@ -22,6 +19,13 @@
             }
         }
         console.log(getComputerChoice());
+        // funkcija, kuri suzaistu viena karta, su dviem parametrais: playerSelection ir computerSelection. Po to turi atspausdinti kas laimejo. Reikia kintamojo zaidejo pasirinkimui ir kito - kompiuteriui. Tada juos palyginti. Jei zaidejas pasirenka kazka pries kazka, jis laimi ir t.t.
+
+        let playerSelection = prompt("Choose rock / paper / scissors");
+        let computerSelection = getComputerChoice();
+        console.log(computerSelection);
+        // function play(); 
+
     </script>
 </body>
 </html>
