@@ -11,11 +11,11 @@
             const randomNumber = Math.floor(Math.random() * 3);
             switch (randomNumber) {
                 case 0:
-                    return "Rock";
+                    return "rock";
                 case 1:
-                    return "Paper";
+                    return "paper";
                 case 2:
-                    return "Scissors";
+                    return "scissors";
             }
         }
         
@@ -23,45 +23,45 @@
 
     function letsPlay(){
         let playerSelection = prompt("Choose Rock / Paper / Scissors");
+        playerSelection = playerSelection.toLowerCase();
         let computerSelection = getComputerChoice();
 
-        console.log(computerSelection);
+        console.log("Computer selection: " + computerSelection + "\nYour selection: " + playerSelection);
 
-        if (playerSelection === "Rock" && computerSelection === "Scissors") {
+        if (playerSelection === "rock" && computerSelection === "scissors") {
             console.log("You Win! Rock beats Scissors.")
 
-        } else if (playerSelection === "Rock" && computerSelection === "Rock") {
+        } else if (playerSelection === "rock" && computerSelection === "rock") {
             console.log("It's ties! Rock and Rock.")
 
-        } else if (playerSelection === "Rock" && computerSelection === "Paper") {
+        } else if (playerSelection === "rock" && computerSelection === "paper") {
             console.log("You Lose! Paper beats Rock.")
         }
 
-        else if (playerSelection === "Paper" && computerSelection === "Scissors") {
+        else if (playerSelection === "paper" && computerSelection === "scissors") {
             console.log("You Lose! Scissors beats Paper.")
 
-        } else if (playerSelection === "Paper" && computerSelection === "Rock") {
+        } else if (playerSelection === "paper" && computerSelection === "rock") {
             console.log("You Win! Paper beats Rock.")
 
-        } else if (playerSelection === "Paper" && computerSelection === "Paper") {
+        } else if (playerSelection === "paper" && computerSelection === "paper") {
             console.log("It's ties! Paper and Paper.")
         }
 
 
-        else if (playerSelection === "Scissors" && computerSelection === "Scissors") {
+        else if (playerSelection === "scissors" && computerSelection === "scissors") {
             console.log("It's ties! Scissors and Scissors.")
 
-        } else if (playerSelection === "Scissors" && computerSelection === "Rock") {
+        } else if (playerSelection === "scissors" && computerSelection === "rock") {
             console.log("You Lose! Rock beats Scissors.")
 
-        } else if (playerSelection === "Scissors" && computerSelection === "Paper") {
+        } else if (playerSelection === "scissors" && computerSelection === "paper") {
             console.log("You Win! Scissors beats Paper.")
         } else (prompt("Please input Rock / Paper/ Scissors")) 
-            
         
     }
      
-    console.log(letsPlay())
+    letsPlay()
 
     </script>
 </body>
