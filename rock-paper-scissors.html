@@ -21,9 +21,16 @@
         console.log(getComputerChoice());
         // funkcija, kuri suzaistu viena karta, su dviem parametrais: playerSelection ir computerSelection. Po to turi atspausdinti kas laimejo. Reikia kintamojo zaidejo pasirinkimui ir kito - kompiuteriui. Tada juos palyginti. Jei zaidejas pasirenka kazka pries kazka, jis laimi ir t.t.
 
-        let playerSelection = prompt("Choose rock / paper / scissors");
+        let playerSelection = prompt("Choose Rock / Paper / Scissors");
         let computerSelection = getComputerChoice();
         console.log(computerSelection);
+        if (playerSelection === "Rock" && computerSelection === "Scissors") {
+            console.log("You Win! Rock beats Scissors.")
+        } else if (playerSelection === "Rock" && computerSelection === "Rock") {
+            console.log("It's ties! Rock and Rock.")
+        } else if (playerSelection === "Rock" && computerSelection === "Paper") {
+            console.log("You Lose! Paper beats Rock.")
+        }
         // function play(); 
 
     </script>
