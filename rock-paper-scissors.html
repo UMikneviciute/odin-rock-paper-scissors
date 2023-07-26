@@ -3,66 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/javaScript.js"></script>
     <title>Document</title>
 </head>
 <body>
-    <script>
-        function getComputerChoice() {
-            const randomNumber = Math.floor(Math.random() * 3);
-            switch (randomNumber) {
-                case 0:
-                    return "rock";
-                case 1:
-                    return "paper";
-                case 2:
-                    return "scissors";
-            }
-        }
-        
-        // funkcija, kuri suzaistu viena karta, su dviem parametrais: playerSelection ir computerSelection. Po to turi atspausdinti kas laimejo. Reikia kintamojo zaidejo pasirinkimui ir kito - kompiuteriui. Tada juos palyginti. Jei zaidejas pasirenka kazka pries kazka, jis laimi ir t.t.
 
-    function letsPlay(){
-        let playerSelection = prompt("Choose Rock / Paper / Scissors");
-        playerSelection = playerSelection.toLowerCase();
-        let computerSelection = getComputerChoice();
-
-        console.log("Computer selection: " + computerSelection + "\nYour selection: " + playerSelection);
-
-        if (playerSelection === "rock" && computerSelection === "scissors") {
-            console.log("You Win! Rock beats Scissors.")
-
-        } else if (playerSelection === "rock" && computerSelection === "rock") {
-            console.log("It's ties! Rock and Rock.")
-
-        } else if (playerSelection === "rock" && computerSelection === "paper") {
-            console.log("You Lose! Paper beats Rock.")
-        }
-
-        else if (playerSelection === "paper" && computerSelection === "scissors") {
-            console.log("You Lose! Scissors beats Paper.")
-
-        } else if (playerSelection === "paper" && computerSelection === "rock") {
-            console.log("You Win! Paper beats Rock.")
-
-        } else if (playerSelection === "paper" && computerSelection === "paper") {
-            console.log("It's ties! Paper and Paper.")
-        }
-
-
-        else if (playerSelection === "scissors" && computerSelection === "scissors") {
-            console.log("It's ties! Scissors and Scissors.")
-
-        } else if (playerSelection === "scissors" && computerSelection === "rock") {
-            console.log("You Lose! Rock beats Scissors.")
-
-        } else if (playerSelection === "scissors" && computerSelection === "paper") {
-            console.log("You Win! Scissors beats Paper.")
-        } else (prompt("Please input Rock / Paper/ Scissors")) 
-        
-    }
-     
-    letsPlay()
-
-    </script>
 </body>
 </html>
