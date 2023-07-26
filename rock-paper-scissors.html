@@ -18,20 +18,50 @@
                     return "Scissors";
             }
         }
-        console.log(getComputerChoice());
+        
         // funkcija, kuri suzaistu viena karta, su dviem parametrais: playerSelection ir computerSelection. Po to turi atspausdinti kas laimejo. Reikia kintamojo zaidejo pasirinkimui ir kito - kompiuteriui. Tada juos palyginti. Jei zaidejas pasirenka kazka pries kazka, jis laimi ir t.t.
 
+    function letsPlay(){
         let playerSelection = prompt("Choose Rock / Paper / Scissors");
         let computerSelection = getComputerChoice();
+
         console.log(computerSelection);
+
         if (playerSelection === "Rock" && computerSelection === "Scissors") {
             console.log("You Win! Rock beats Scissors.")
+
         } else if (playerSelection === "Rock" && computerSelection === "Rock") {
             console.log("It's ties! Rock and Rock.")
+
         } else if (playerSelection === "Rock" && computerSelection === "Paper") {
             console.log("You Lose! Paper beats Rock.")
         }
-        // function play(); 
+
+        else if (playerSelection === "Paper" && computerSelection === "Scissors") {
+            console.log("You Lose! Scissors beats Paper.")
+
+        } else if (playerSelection === "Paper" && computerSelection === "Rock") {
+            console.log("You Win! Paper beats Rock.")
+
+        } else if (playerSelection === "Paper" && computerSelection === "Paper") {
+            console.log("It's ties! Paper and Paper.")
+        }
+
+
+        else if (playerSelection === "Scissors" && computerSelection === "Scissors") {
+            console.log("It's ties! Scissors and Scissors.")
+
+        } else if (playerSelection === "Scissors" && computerSelection === "Rock") {
+            console.log("You Lose! Rock beats Scissors.")
+
+        } else if (playerSelection === "Scissors" && computerSelection === "Paper") {
+            console.log("You Win! Scissors beats Paper.")
+        } else (prompt("Please input Rock / Paper/ Scissors")) 
+            
+        
+    }
+     
+    console.log(letsPlay())
 
     </script>
 </body>
