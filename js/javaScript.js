@@ -60,49 +60,57 @@ function game(){
 letsPlay()
 let computerScore = 0;
 let playerScore = 0;
+
 if (playerSelection === "scissors" && computerSelection === "paper" || playerSelection === "paper" && computerSelection === "rock" || playerSelection === "rock" && computerSelection === "scissors"){
-    playerScore++;
+    playerScore ++;
 } else if (playerSelection === "scissors" && computerSelection === "rock" || playerSelection === "paper" && computerSelection === "scissors" || playerSelection === "rock" && computerSelection === "paper") {
-    computerScore++ ;
-    // KOPIJUOTI KITIEMS
+    computerScore ++ ;
 }
 console.log("Round 1: \nComputer score: " + computerScore + "\nYour score: " + playerScore)
 
 
 letsPlay()
 if (playerSelection === "scissors" && computerSelection === "paper" || playerSelection === "paper" && computerSelection === "rock" || playerSelection === "rock" && computerSelection === "scissors"){
-    playerScore = + 1;
+    playerScore ++;
 } else if (playerSelection === "scissors" && computerSelection === "rock" || playerSelection === "paper" && computerSelection === "scissors" || playerSelection === "rock" && computerSelection === "paper") {
-    computerScore = + 1;
+    computerScore ++;
 }
 console.log("Round 2: \nComputer score: " + computerScore + "\nYour score: " + playerScore)
 
 
 letsPlay()
 if (playerSelection === "scissors" && computerSelection === "paper" || playerSelection === "paper" && computerSelection === "rock" || playerSelection === "rock" && computerSelection === "scissors"){
-    playerScore = + 1;
+    playerScore ++;
 } else if (playerSelection === "scissors" && computerSelection === "rock" || playerSelection === "paper" && computerSelection === "scissors" || playerSelection === "rock" && computerSelection === "paper") {
-    computerScore = + 1;
+    computerScore ++;
 }
 console.log("Round 3: \nComputer score: " + computerScore + "\nYour score: " + playerScore)
 
 
 letsPlay()
 if (playerSelection === "scissors" && computerSelection === "paper" || playerSelection === "paper" && computerSelection === "rock" || playerSelection === "rock" && computerSelection === "scissors"){
-    playerScore = + 1;
+    playerScore ++;
 } else if (playerSelection === "scissors" && computerSelection === "rock" || playerSelection === "paper" && computerSelection === "scissors" || playerSelection === "rock" && computerSelection === "paper") {
-    computerScore = + 1;
+    computerScore ++;
 }
 console.log("Round 4: \nComputer score: " + computerScore + "\nYour score: " + playerScore)
 
 
 letsPlay()
 if (playerSelection === "scissors" && computerSelection === "paper" || playerSelection === "paper" && computerSelection === "rock" || playerSelection === "rock" && computerSelection === "scissors"){
-    playerScore = + 1;
+    playerScore ++;
 } else if (playerSelection === "scissors" && computerSelection === "rock" || playerSelection === "paper" && computerSelection === "scissors" || playerSelection === "rock" && computerSelection === "paper") {
-    computerScore = + 1;
+    computerScore ++;
 }
 console.log("Round 5: \nComputer score: " + computerScore + "\nYour score: " + playerScore)
+
+if (computerScore < playerScore) {
+    console.log("You won the game!")
+} else if (computerScore === playerScore){
+    console.log("No loosers, no winners.")
+} else {
+    console.log("You loose :(")
+}
 }
 
 game()
