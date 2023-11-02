@@ -1,0 +1,29 @@
+button {
+    width: 20%;
+    border-radius: 50px;
+    color: #075985;
+    background-color: #e0f2fe;
+    border: 1px solid #075985;
+    font-size: 150%;
+    cursor: pointer;
+        &:hover {
+            background-color: #075985;
+            color: #e0f2fe;
+        }
+}
+
+img {
+    width: 150px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.pictures {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+    margin-bottom: 25px;
+}
