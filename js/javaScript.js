@@ -6,20 +6,6 @@ let playerScore = 0;
 
  let roundCounter = 1;
 
-// const bodyElement = document.querySelector('body');
-// console.log(bodyElement);
-// let btnRock = document.createElement('button');
-// btnRock.textContent = 'Rock';
-// bodyElement.appendChild(btnRock);
-
-// let btnPaper = document.createElement('button');
-// btnPaper.textContent = 'Paper';
-// bodyElement.appendChild(btnPaper);
-
-// let btnScissors = document.createElement('button');
-// btnScissors.textContent = 'Scissors';
-// bodyElement.appendChild(btnScissors);
-
 function getComputerChoice() {
     const randomNumber = Math.floor(Math.random() * 3);
     switch (randomNumber) {
@@ -31,12 +17,6 @@ function getComputerChoice() {
             return "scissors";
     }
 }
-
-
-
-// funkcija, kuri suzaistu viena karta, su dviem parametrais: playerSelection ir computerSelection. Po to turi atspausdinti kas laimejo. Reikia kintamojo zaidejo pasirinkimui ir kito - kompiuteriui. Tada juos palyginti. Jei zaidejas pasirenka kazka pries kazka, jis laimi ir t.t.
-
-
 
 let btnRock = document.querySelector('.rock');
     btnRock.addEventListener("click", selectRock);
@@ -160,7 +140,3 @@ function gameOver(){
     btnPaper.removeEventListener("click", selectPaper);
     btnScissors.removeEventListener("click", selectScissors);
 }
-
-
-// game()
-
