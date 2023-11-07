@@ -55,7 +55,7 @@ function letsPlay(){
     let resultText = document.querySelector('.results h5');
     
     if (playerSelection === "rock" && computerSelection === "scissors") {
-        resultText.textContent = ("You win this round! Rock beats Scissors.");
+        resultText.textContent = ("You won this round! Rock beats Scissors.");
         playerScore++;
 
     } else if (playerSelection === "rock" && computerSelection === "rock") {
@@ -63,16 +63,16 @@ function letsPlay(){
         
 
     } else if (playerSelection === "rock" && computerSelection === "paper") {
-        resultText.textContent = ("You lose this round! Paper beats Rock.");
+        resultText.textContent = ("You lost this round! Paper beats Rock.");
         computerScore++;
     }
 
     else if (playerSelection === "paper" && computerSelection === "scissors") {
-        resultText.textContent = ("You lose this round! Scissors beats Paper.");
+        resultText.textContent = ("You lost this round! Scissors beats Paper.");
         computerScore++;
 
     } else if (playerSelection === "paper" && computerSelection === "rock") {
-        resultText.textContent = ("You win this round! Paper beats Rock.");
+        resultText.textContent = ("You won this round! Paper beats Rock.");
         playerScore++;
 
     } else if (playerSelection === "paper" && computerSelection === "paper") {
@@ -84,11 +84,11 @@ function letsPlay(){
         resultText.textContent = ("A draw! Scissors and Scissors.");
         
     } else if (playerSelection === "scissors" && computerSelection === "rock") {
-        resultText.textContent = ("You lose this round! Rock beats Scissors.");
+        resultText.textContent = ("You lost this round! Rock beats Scissors.");
         computerScore++;
 
     } else if (playerSelection === "scissors" && computerSelection === "paper") {
-        resultText.textContent = ("You win this round! Scissors beats Paper.");
+        resultText.textContent = ("You won this round! Scissors beats Paper.");
         playerScore++;
     }
 
@@ -134,4 +134,14 @@ function gameOver(){
 
     const pictureDiv = document.querySelector('.pictures');
     pictureDiv.parentNode.removeChild(pictureDiv);
+
+    const boxDiv = document.querySelector('.box');
+    let btnReplay = document.createElement('button');
+    btnReplay.textContent = "Replay";
+    boxDiv.appendChild(btnReplay);
+
+    btnReplay.addEventListener("click", () => {
+        location.reload();
+    });
+      
 }

@@ -46,6 +46,13 @@ img {
     color: #075985;
     background-color: #e0f2fe;
     border: 1px solid #075985;
+    display: flex;
+    flex-direction: column;
+}
+
+.box button {
+    margin-bottom: 5%;
+    align-self: center;
 }
 
 .points {
@@ -73,4 +80,12 @@ img {
 .winner {
     font-size: 250%;
     text-align: center;
+}
+
+@media (min-width: 940px) {
+.width {
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+    }
 }
