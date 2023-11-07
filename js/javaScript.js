@@ -49,70 +49,59 @@ function letsPlay(){
 
     computerSelection = getComputerChoice();
 
-    const selectionDiv = document.querySelector('.results');
-    let selectionText = document.createElement('p');
-    selectionText.textContent = ("Your selection: " + playerSelection + "  Computer selection: " + computerSelection);
-    selectionDiv.appendChild(selectionText);
+    let selectionText = document.querySelector('.results p');
+    selectionText.textContent = "Your selection: " + playerSelection + " VS " + "Computer selection: " + computerSelection;
 
-    let resultText = document.createElement('p');
-    selectionDiv.appendChild(resultText);
-
+    let resultText = document.querySelector('.results h5');
+    
     if (playerSelection === "rock" && computerSelection === "scissors") {
-        resultText.textContent = ("You Win! Rock beats Scissors.");
+        resultText.textContent = ("You win this round! Rock beats Scissors.");
         playerScore++;
-        console.log("You Win! Rock beats Scissors.")
 
     } else if (playerSelection === "rock" && computerSelection === "rock") {
         resultText.textContent = ("A draw! Rock and Rock.");
         
-        console.log("A draw! Rock and Rock.")
 
     } else if (playerSelection === "rock" && computerSelection === "paper") {
-        resultText.textContent = ("You Lose! Paper beats Rock.");
+        resultText.textContent = ("You lose this round! Paper beats Rock.");
         computerScore++;
-        console.log("You Lose! Paper beats Rock.")
     }
 
     else if (playerSelection === "paper" && computerSelection === "scissors") {
-        resultText.textContent = ("You Lose! Scissors beats Paper.");
+        resultText.textContent = ("You lose this round! Scissors beats Paper.");
         computerScore++;
-        console.log("You Lose! Scissors beats Paper.")
 
     } else if (playerSelection === "paper" && computerSelection === "rock") {
-        resultText.textContent = ("You Win! Paper beats Rock.");
+        resultText.textContent = ("You win this round! Paper beats Rock.");
         playerScore++;
-        console.log("You Win! Paper beats Rock.")
 
     } else if (playerSelection === "paper" && computerSelection === "paper") {
         resultText.textContent = ("A draw! Paper and Paper.");
-        
-        console.log("A draw! Paper and Paper.")
     }
 
 
     else if (playerSelection === "scissors" && computerSelection === "scissors") {
         resultText.textContent = ("A draw! Scissors and Scissors.");
         
-        console.log("A draw! Scissors and Scissors.")
-
     } else if (playerSelection === "scissors" && computerSelection === "rock") {
-        resultText.textContent = ("You Lose! Rock beats Scissors.");
+        resultText.textContent = ("You lose this round! Rock beats Scissors.");
         computerScore++;
-        console.log("You Lose! Rock beats Scissors.")
 
     } else if (playerSelection === "scissors" && computerSelection === "paper") {
-        resultText.textContent = ("You Win! Scissors beats Paper.");
+        resultText.textContent = ("You win this round! Scissors beats Paper.");
         playerScore++;
-        console.log("You Win! Scissors beats Paper.")
     }
+
+    let yourPoints = document.querySelector('.your-points p');
+    yourPoints.textContent = "Your score: " + playerScore;
+
+    let computerPoints = document.querySelector('.computer-points p');
+    computerPoints.textContent = "Computer score: " + computerScore;
 }
 
 function game(){
-    const roundsDiv = document.querySelector('.rounds');
-    let roundsText = document.createElement('p');
-    roundsDiv.appendChild(roundsText);
-
-    roundsText.textContent = ("Round " + roundCounter + ": Computer score: " + computerScore + "Your score: " + playerScore);
+    let roundsText = document.querySelector('.rounds p');
+    roundsText.textContent = ("Round " + roundCounter);
     roundCounter++
 
     if (playerScore === 5 || computerScore === 5) {
@@ -139,4 +128,10 @@ function gameOver(){
     btnRock.removeEventListener("click", selectRock);
     btnPaper.removeEventListener("click", selectPaper);
     btnScissors.removeEventListener("click", selectScissors);
+
+    const buttonDiv = document.querySelector('.container');
+    buttonDiv.parentNode.removeChild(buttonDiv);
+
+    const pictureDiv = document.querySelector('.pictures');
+    pictureDiv.parentNode.removeChild(pictureDiv);
 }
